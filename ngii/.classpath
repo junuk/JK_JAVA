@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="lib/c3p0-0.9.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-net-3.1.jar"/>
+	<classpathentry kind="lib" path="lib/informix-jdbc-3.70.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="lib/mybatis-3.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.20-bin.jar"/>
+	<classpathentry kind="lib" path="lib/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-schemas-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="lib/quartz-2.1.6.jar"/>
+	<classpathentry kind="lib" path="lib/quartz-all-2.1.6.jar"/>
+	<classpathentry kind="lib" path="lib/servlet-api-2.5-20081211.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/jazzlib-binary-0.07-juz.jar"/>
+	<classpathentry kind="lib" path="lib/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang3-3.4.jar"/>
+	<classpathentry kind="lib" path="lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/commons-pool-1.6.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="lib/poi-examples-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="lib/poi-excelant-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-schemas-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="lib/poi-scratchpad-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-compress-1.10.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sqlQuery">
+
+	<!-- 개별수치지형도 각 도엽번호 별 TS_DATA COUNT 조회 -->
+	<select id="getTsDataCnt" parameterType="String" resultType="int">
+		SELECT
+			COUNT(*)
+		FROM TS_DATA
+		WHERE METDATA_SN = '27087'		-- 임의 테스트용 MetData Value
+		AND DATA_MAPDMC_NO = #{dataMapdmcNo}
+	</select>
+	
+	<!-- 개별수치지형도 각 도엽번호 별 TS_DATA 조회 -->
+	<select id="getTsData" parameterType="com.vo.NgiiDataDomain" resultType="com.vo.NgiiDataDomain">
+		SELECT
+			DATA_SN AS dataSn
+			,	DATA_NM AS dataNm
+		FROM TS_DATA
+		WHERE METDATA_SN = #{metdataSn}
+		AND DATA_MAPDMC_NO = #{dataMapdmcNo}
+	</select>
+	
+	
+	<!-- 개별수치지형도 메타데이터 신규등록 (유통시스템) -->
+	<insert id="insertMetData" parameterType="com.vo.NgiiMetDataDomain" keyColumn="metdata_sn" keyProperty="metdata_sn" useGeneratedKeys="true">
+		INSERT INRO TS_METDATA(
+		     supplierid ,
+		     regist_secd ,
+		     metdata_sj ,
+		     sptl_lclas_clcd ,
+		     sptl_mclas_clcd ,
+		     oval_clcd ,
+		     cntm_clcd ,
+		     trgnpt_clcd ,
+		     sc_clcd ,
+		     sc_clcd_nm ,
+		     updt_cycle_clcd ,
+		     frst_creat_dt 
+		) VALUES ( 
+		     #{supplierid} ,
+		     #{registSecd} ,
+		     #{metdataSj} ,		     
+		     #{sptlLclasClcd} ,
+		     #{sptlMclasClcd} ,
+		     #{ovalClcd} ,
+		     #{cntmClcd} ,
+		     #{trgnptClcd} ,
+		     #{scClcd} ,
+		     #{scClcdNm} ,		     
+		     #{updtCycleClcd} ,
+			sysdate
+		)
+	</insert>
+	
+	<!-- 개별수치지형도 메타데이터 업데이트 -->
+	<update id="uptMetData" parameterType="com.vo.NgiiMetDataDomain">
+		UPDATE TS_METDATA
+		SET
+			SUPPLIERID = #{supplierid}
+				,	REGIST_SECD = #{registSecd}
+				,	METDATA_SJ = #{metdataSj}
+				,	SPTL_LCLAS_CLCD = #{sptlLclasClcd}
+				,	SPTL_MCLAS_CLCD = #{sptlMclasClcd}
+				,	OVAL_CLCD = #{ovalClcd}
+				,	CNTM_CLCD = #{cntmClcd}
+				,	TRGNPT_CLCD = #{trgnptClcd}
+				,	SC_CLCD = #{scClcd}
+				,	SC_CLCD_NM = #{scClcdNm}
+				,	UPDT_CYCLE_CLCD = #{updtCycleClcd}
+				,	FRST_CREAT_DT = #{frstCreatDt}
+		WHERE METDATA_SN = #{metdataSn}
+	</update>
+	
+	<!-- 개별수치지형도 데이터 신규등록 -->
+	<insert id="insertTsData" parameterType="com.vo.NgiiDataDomain">
+		INSERT INTO TS_DATA 
+		(
+			DATA_SN
+			,	METDATA_SN
+			,	DATA_NM
+			,	DATA_FILE_FORMAT
+			,	DATA_MAPDMC_NO
+			,	DATA_MNFCT_DE
+			,	PRPLCID
+			,	PROVD_MTH_SECD
+			,	SLE_MTH_SECD
+			,	PURCHS_POSBL_YN
+			,	DATA_LINK_URL
+			,	DATA_SUMRY_DC
+			,	DATA_VRIFY_SECD
+			,	DISTB_CONFM_CLCD
+			,	DISTB_RETURN_RESN
+			,	DISTB_CONFM_PROCS_DT
+			,	DATA_DELETE_YN
+			,	DATA_DELETE_DT
+			,	FRST_CREAT_DT
+			,	LAST_UPDT_DT
+		)
+		VALUES 
+		(
+			#{dataSn}
+			,	#{metdataSn}
+			,	#{dataNm}
+			,	#{dataFileFormat}
+			,	#{dataMapdmcNo}
+			,	#{dataMnfctDe}
+			,	#{prplcid}
+			,	#{provdMthSecd}
+			,	#{sleMthSecd}
+			,	#{purchsPosblYn}
+			,	#{dataLinkUrl}
+			,	#{dataSumryDc}
+			,	#{dataVrifySecd}
+			,	#{distbConfmClcd}
+			,	#{distbReturnResn}
+			,	#{distbConfmProcsDt}
+			,	#{dataDeleteYn}
+			,	#{dataDeleteDt}
+			,	#{frstCreatDt}
+			,	SYSDATE
+		)
+	</insert>
+	
+	<!-- 개별수치지형도 데이터 갱신등록 (필) -->
+	<update id="uptTsData" parameterType="com.vo.NgiiDataDomain">
+	UPDATE TS_DATA
+	SET
+		DATA_MNFCT_DE = TO_CHAR(CURRENT, "%Y%m%d")
+		,	LAST_UPDT_DT = SYSDATE
+	WHERE METDATA_SN = #{metdataSn}
+	AND DATA_SN = #{dataSn}
+	AND DATA_MAPDMC_NO = #{dataMapdmcNo}
+	</update>
+	
+	
+	<!-- 공간정보 메타데이터 특징 및 활용 신규등록 (유통시스템) -->
+	<insert id="insertMetDataSfpu" parameterType="com.vo.NgiiDataDomain">
+		INSERT INTO TS_METDATA_SFAPU (
+			metdata_sn,
+			dc_secd,
+			dc_ordr,
+			dc_cn,
+			dc_image
+		) VALUES (
+			#{metdata_sn},
+			#{dc_secd},
+			#{dc_ordr},
+			#{dc_cn},
+			#{dc_image}
+		)
+	</insert>
+	
+	<!-- 공간정보 메타데이터 활용 분류 및 기타 신규등록 (유통시스템) -->
+	<insert id="insertMetDataPrcUse" parameterType="com.vo.NgiiDataDomain">
+		INSERT INTO TS_METDATA_PRCUSE (
+			metdata_sn,
+			prcuse_clcd,
+			prcuse_etc_cn
+		) VALUES (
+			#{metdata_sn},
+			#{prcuse_clcd},
+			#{prcuse_etc_cn}
+		)
+	</insert>
+	
+	<!-- 도엽번호에 대한 행정구역 리스트를 조회(시도 - 시군구) (유통시스템) -->
+	<select id="selectListSidoSigungu" parameterType="hashmap" resultType="com.vo.NgiiDataDomain">
+		SELECT  distinct
+				B.sido as sido,
+				B.sigungu as sigungu,
+				B.sidonm as sidoNm,
+        		B.sigungunm as sigunguNm        		          		
+		FROM tc_mapnum_sgg A
+		INNER JOIN sgg_code B
+		ON A.sido = B.sido and A.sigungu = B.sigungu
+		WHERE A.mapnum = #{mapDmcNum}
+		AND A.scale = #{scNm}		
+	</select>
+	
+	<!-- 도엽번호에 대한 행정구역 단건 조회(시도 - 시군구) (유통시스템) -->
+	<select id="selectSidoSigungu" parameterType="hashmap" resultType="com.vo.NgiiDataDomain">
+		SELECT  distinct
+				B.sido as sido,
+				B.sigungu as sigungu,
+				B.sidonm as sidoNm,
+        		B.sigungunm as sigunguNm        		          		
+		FROM tc_mapnum_sgg A
+		INNER JOIN sgg_code B
+		ON A.sido = B.sido and A.sigungu = B.sigungu
+		WHERE A.mapnum = #{mapDmcNum}
+		AND A.scale = #{scNm}
+	</select>
+	
+	<!-- 공간정보 파일 데이터 인서트 -->
+	<insert id="insertFileData" parameterType="com.vo.NgiiDataFileDomain">
+		INSERT INTO TS_DATA_FILE
+		(
+			DATA_SN
+			,	DATA_FILE_SIZE
+			,	DATA_ZIP_FILE_NM
+			,	DATA_ZIP_FILE_SIZE
+			,	DATA_ZIP_FILE_BYTE
+		)
+		VALUES 
+		(
+			#{dataSn}
+			,	#{dataFileSize}
+			,	#{dataZipFileNm}
+			,	#{dataZipFileSize}
+			,	#{dataZipFileByte}
+		)
+		
+	</insert>
+	
+	<!-- 공간정보 파일 데이터 업데이트 (필) -->
+	<update id="uptTsDataFile" parameterType="com.vo.NgiiDataDomain">
+		UPDATE TS_DATA_FILE
+		SET
+			DATA_ZIP_FILE_NM = #{dataZipFileNm}
+			,	DATA_ZIP_FILE_SIZE = #{dataZipFileSize}
+			<!-- ,	DATA_ZIP_FILE_BYTE = #{dataZipFileByte} -->
+			,	DATA_ZIP_FILE_BYTE = #{dataZipFileByte,jdbcType=BLOB}
+		WHERE DATA_SN = #{dataSn}
+	</update>
+	
+	<!-- 공간정보 썸네일 등록 -->
+	<insert id="insertThumNail" parameterType="com.vo.NgiiDataDomain">
+		INSERT INTO TS_DATA_IMAGE (
+			DATA_SN,
+			IMAGE_ORDR,
+			IMAGE_BYTE
+		) values (
+			#{data_sn},
+			#{image_ordr},
+			#{image_byte}
+		)
+	</insert>
+	
+	<!-- 공간정보 썸네일 파일 갱신 -->
+	<update id="uptThumnail" parameterType="com.vo.NgiiDataImageDomain">
+		UPDATE TS_DATA_IMAGE
+		SET
+		IMAGE_BYTE = #{imageByte}
+		WHERE DATA_SN = #{dataSn}
+		AND IMAGE_ORDR = #{imageOrdr}
+	</update>
+	
+	
+	
+	<!-- 데이터별 로그 등록 -->
+	<insert id="insNgiiLog" parameterType="com.vo.NgiiLogDomain">
+		INSERT INTO TH_NGII_UPDT_CNTC 
+		(
+			DATA_SN
+			, NGII_UPTN_SECD
+			, SUPPLIERID
+			, NGII_UPTN_DT
+		)
+		VALUES 
+		(
+			#{dataSn}
+			, #{ngiiUptnSecd}
+			, 'ngigo'
+			, SYSDATE
+		)
+	</insert>
+	
+</mapper>

@@ -1,0 +1,49 @@
+*----------------------------------------------------------------
+*  *
+
+* - Description  : 
+* - Procssing Date : 2015-10-29 21:23:49
+*----------------------------------------------------------------
+*====================================================================================
+[2015-10-29 21:23:46] (LOG) ===== <PROCESS> 초기화 =====
+[2015-10-29 21:23:46] (LOG) ===== <PROCESS> DB Session을 연결합니다
+[2015-10-29 21:23:46] (LOG) ===== (start) 처리 시작 =====
+[2015-10-29 21:23:46] (LOG) === <JOB> 처리 시작 ===
+[2015-10-29 21:23:46] (LOG) Transaction을 시작합니다.
+[2015-10-29 21:23:49] (LOG) dataZipFileNm -> C:\DEV_JK_TEST\ngii_test_data\dxf\33606060_2012_00000557447819.zip
+[2015-10-29 21:23:49] (LOG) getDataZipFileSize -> 423922
+[2015-10-29 21:23:49] (LOG) dataZipFileNm -> C:\DEV_JK_TEST\ngii_test_data\dxf\33606068_2012_00000557447819.zip
+[2015-10-29 21:23:49] (LOG) getDataZipFileSize -> 1123783
+[2015-10-29 21:23:49] (LOG) dataZipFileNm -> C:\DEV_JK_TEST\ngii_test_data\dxf\33606070_2012_00000557447819.zip
+[2015-10-29 21:23:49] (LOG) getDataZipFileSize -> 1229026
+[2015-10-29 21:23:49] (LOG) dataZipFileNm -> C:\DEV_JK_TEST\ngii_test_data\dxf\33607069_2012_00000557447819.zip
+[2015-10-29 21:23:49] (LOG) getDataZipFileSize -> 636169
+[2015-10-29 21:23:49] (LOG) dataZipFileNm -> C:\DEV_JK_TEST\ngii_test_data\dxf\33608031_2012_00000557447819.zip
+[2015-10-29 21:23:49] (LOG) getDataZipFileSize -> 688250
+[2015-10-29 21:23:49] (LOG) dataZipFileNm -> C:\DEV_JK_TEST\ngii_test_data\dxf\33608041_2012_00000557447819.zip
+[2015-10-29 21:23:49] (LOG) getDataZipFileSize -> 521195
+[2015-10-29 21:23:49] (LOG) dataZipFileNm -> C:\DEV_JK_TEST\ngii_test_data\dxf\33608042_2012_00000557447819.zip
+[2015-10-29 21:23:49] (LOG) getDataZipFileSize -> 1058286
+[2015-10-29 21:23:49] (LOG) dataZipFileNm -> C:\DEV_JK_TEST\ngii_test_data\ngi\358150781_2012_00000557447819.zip
+[2015-10-29 21:23:49] (LOG) getDataZipFileSize -> 180170
+[2015-10-29 21:23:49] (LOG) dataZipFileNm -> C:\DEV_JK_TEST\ngii_test_data\ngi\358151102_2012_00000557447819.zip
+[2015-10-29 21:23:49] (LOG) getDataZipFileSize -> 837370
+[2015-10-29 21:23:49] (LOG) dataZipFileNm -> C:\DEV_JK_TEST\ngii_test_data\ngi\358151103_2012_00000557447819.zip
+[2015-10-29 21:23:49] (LOG) getDataZipFileSize -> 465607
+[2015-10-29 21:23:49] (LOG) dataZipFileNm -> C:\DEV_JK_TEST\ngii_test_data\ngi\358151104_2012_00000557447819.zip
+[2015-10-29 21:23:49] (LOG) getDataZipFileSize -> 332387
+[2015-10-29 21:23:49] (LOG) dataZipFileNm -> C:\DEV_JK_TEST\ngii_test_data\ngi\358151108_2012_00000557447819.zip
+[2015-10-29 21:23:49] (LOG) getDataZipFileSize -> 405714
+[2015-10-29 21:23:49] (LOG) dataZipFileNm -> C:\DEV_JK_TEST\ngii_test_data\ngi\358151109_2012_00000557447819.zip
+[2015-10-29 21:23:49] (LOG) getDataZipFileSize -> 461752
+[2015-10-29 21:23:49] (LOG) dataZipFileNm -> C:\DEV_JK_TEST\ngii_test_data\ngi\358151110_2012_00000557447819.zip
+[2015-10-29 21:23:49] (LOG) getDataZipFileSize -> 279451
+[2015-10-29 21:23:49] (LOG) dataZipFileNm -> C:\DEV_JK_TEST\ngii_test_data\ngi\358151112_2012_00000557447819.zip
+[2015-10-29 21:23:49] (LOG) getDataZipFileSize -> 423890
+[2015-10-29 21:23:49] (LOG) dataZipFileNm -> C:\DEV_JK_TEST\ngii_test_data\ngi\358151121_2012_00000557447819.zip
+[2015-10-29 21:23:49] (LOG) getDataZipFileSize -> 175851
+[2015-10-29 21:23:49] (LOG) dataZipFileNm -> C:\DEV_JK_TEST\ngii_test_data\ngi\358151161_2012_00000557447819.zip
+[2015-10-29 21:23:49] (LOG) getDataZipFileSize -> 278113
+[2015-10-29 21:23:49] (LOG) ## <PROCESS> 종료 ##
+[2015-10-29 21:23:49] (LOG) DB Session을 해제합니다.
+*====================================================================================

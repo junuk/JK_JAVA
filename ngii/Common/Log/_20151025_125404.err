@@ -1,0 +1,5 @@
+*----------------------------------------------------------------
+*  *
+ - Error (Exception) is occured in 2015-10-25 12:54:04
+*----------------------------------------------------------------
+2015-10-25 12:54:04] *ERR* com.common.sdiException: 개별수치지형도 변동자료 적재 디렉토리 조회 중 오류가 발생하였습니다. (StringIndexOutOfBoundsException) => java.lang.StringIndexOutOfBoundsException: String index out of range: -1 (ERROR)

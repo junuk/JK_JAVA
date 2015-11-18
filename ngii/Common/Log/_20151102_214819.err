@@ -1,0 +1,10 @@
+*----------------------------------------------------------------
+*  *
+ - Error (Exception) is occured in 2015-11-02 21:48:19
+*----------------------------------------------------------------
+2015-11-02 21:48:19] *ERR* com.common.sdiException: 개별수치지형도 갱신중 오류가 발생하였습니다. (PersistenceException) => org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: java.sql.SQLException: Can't convert from: input stream
+### The error may involve sqlQuery.uptTsDataFile-Inline
+### The error occurred while setting parameters
+### SQL: UPDATE TS_DATA_FILE   SET    DATA_ZIP_FILE_NM = ?    , DATA_ZIP_FILE_SIZE = ?    , DATA_ZIP_FILE_BYTE = ?    --, DATA_ZIP_FILE_BYTE = ?   WHERE DATA_SN = ?
+### Cause: java.sql.SQLException: Can't convert from: input stream (ERROR)

@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Mon Nov 16 14:53:32 KST 2015
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=ngiiProcess_151116.jar
+manifest.mergeall=true
+manifest.mainclass=com.controller.NgiiStater
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=
